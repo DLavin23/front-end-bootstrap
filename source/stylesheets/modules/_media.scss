@@ -1,0 +1,40 @@
+// =======================================
+// Media Object - sets image left and
+// text to the right
+// =======================================
+.media {
+	@include clearfix;
+}
+
+.media-object {
+	@include clearfix;
+	@include breakpoint($palm-medium) {
+		float: left;
+		margin-right: 1em;
+	}
+	img {
+		@extend %media-img;
+	}
+}
+
+// =======================================
+// Alternate Media Object - sets image
+// right and text to the left
+// =======================================
+.media-object-alt {
+	@include clearfix;
+	@include breakpoint($palm-medium) {
+		float: right;
+		margin-left: 1em;
+	}
+	img {
+		@extend %media-img;
+	}
+}
+
+.media-body {
+	@include clearfix;
+	p {
+		margin-top: 0;
+	}
+}

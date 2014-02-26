@@ -1,0 +1,59 @@
+// =======================================
+// Typographic styles
+// =======================================
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $base-font-family;
+	font-weight: bold;
+}
+
+h1 {
+	font-size: $h1-default;
+}
+
+h2 {
+	font-size: $h2-default;
+}
+
+h3 {
+	font-size: $h3-default;
+}
+
+h4 {
+	font-size: $h4-default;
+}
+
+h5 {
+	font-size: $h5-default;
+}
+
+h6 {
+	font-size: $h6-default;
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+	color: $secondary-headline-text;
+	font-size: 60%;
+}
+
+// Body Copy
+p {
+	font-family: $base-font-family;
+	font-size: $h5-default;
+	color: $light-black;
+	@include at-breakpoint($lap-large) {
+		font-size: $base-font-size;
+	}
+}
+

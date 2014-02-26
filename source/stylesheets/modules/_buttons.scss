@@ -1,0 +1,64 @@
+// =======================================
+// Button Structure
+// =======================================
+%btn,
+.btn {
+	-webkit-appearance: none;
+	border: none;
+	cursor: pointer;
+	display: inline-block;
+	font-family: inherit;
+	padding: $base-btn-padding;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+
+	// =======================================
+	// Button styles
+	// =======================================
+	&.default {
+		@include btn-color($btn-default, $btn-default-text);
+	}
+	&.primary {
+		@include btn-color($btn-primary, $white);
+	}
+	&.secondary {
+		@include btn-color($btn-secondary, $white);
+	}
+	&.success {
+		@include btn-color($btn-success, $white);
+	}
+	&.warning {
+		@include btn-color($btn-warning, $btn-default-text);
+	}
+	&.danger {
+		@include btn-color($btn-danger, $white);
+	}
+
+	// =======================================
+	// Button size
+	// =======================================
+	&.tiny {
+		@include btn-size($btn-tiny, $base-btn-padding);
+	}
+	&.small {
+		@include btn-size($btn-small, $base-btn-padding);
+	}
+	&.medium {
+		@include btn-size($btn-medium, $base-btn-padding);
+	}
+	&.large {
+		@include btn-size($btn-large, $base-btn-padding);
+	}
+	&.x-large {
+		@include btn-size($btn-x-large, $base-btn-padding);
+	}
+	i {
+		// placeholder for icons in a button
+	}
+}
+
+.btn-rounded {
+	@include border-radius($btn-rounded);
+}

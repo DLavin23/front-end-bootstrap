@@ -1,0 +1,94 @@
+// ======================================
+// displays grid overlay
+// ======================================
+.grid-background {
+	@include susy-grid-background;
+}
+
+// ======================================
+// Initiates a grid container row using
+// the susy container mixin
+// ======================================
+.g-row {
+	@include container;
+}
+
+.g-full {
+	@include span-columns(12);
+}
+
+.g-col-10 {
+	@extend %mobile-grid;
+	@include breakpoint($palm-large) {
+		@include span-columns(10,12);
+	}
+}
+
+.g-col-9 {
+	@extend %mobile-grid;
+	@include breakpoint($palm-large) {
+		@include span-columns(9,12);
+	}
+}
+
+.g-col-8 {
+	@extend %mobile-grid;
+	@include breakpoint($palm-large) {
+		@include span-columns(8,12);
+	}
+}
+
+.g-col-7 {
+	@extend %mobile-grid;
+	@include breakpoint($palm-large) {
+		@include span-columns(7,12);
+	}
+}
+
+.g-col-6 {
+	@extend %mobile-grid;
+	@include breakpoint($palm-large) {
+		@include span-columns(6,12);
+	}
+}
+
+.g-col-5 {
+	@extend %mobile-grid;
+	@include breakpoint($palm-large) {
+		@include span-columns(5,12);
+	}
+}
+
+.g-col-4 {
+	@extend %mobile-grid;
+	@include breakpoint($palm-large) {
+		@include span-columns(4,12);
+	}
+}
+
+.g-col-3 {
+	@extend %mobile-grid;
+	@include breakpoint($palm-large) {
+		@include span-columns(3,12);
+	}
+}
+
+.g-col-2 {
+	@extend %mobile-grid;
+	@include breakpoint($palm-large) {
+		@include span-columns(2,12);
+	}
+}
+
+// ======================================
+// Clears the last column in a row
+// ======================================
+.omega {
+	@include omega;
+}
+
+// ======================================
+// If you don't want to use Susy, just
+// delete everything above and write your
+// own grid system
+// ======================================

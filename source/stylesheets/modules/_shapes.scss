@@ -1,0 +1,10 @@
+// =======================================
+// Custom Shapes 
+// =======================================
+.circle {
+	@include border-radius(50%);
+}
+
+.rounded {
+	@include border-radius(5%);
+}

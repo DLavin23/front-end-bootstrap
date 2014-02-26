@@ -1,0 +1,110 @@
+// =============================================
+// Color variables
+// =============================================
+$white: #fff;
+$black: #1A1A1A;
+$light-black: #333333;
+$red: #DB4437;
+$green: #0F9D58;
+$yellow: #F4B400;
+$light-blue: #4285F4;
+$gray: #4D4D4D;
+$light-gray: #e2e8e9;
+$slate-gray: #748595;
+$blue: #34495e;
+$dark-green: #588f27;
+$lime-green: #a9cf54;
+$yellow: #ccbd00;
+$base-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
+
+// =============================================
+// Typography variables
+// =============================================
+$base-font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+$base-font-size: 1em;
+$base-line-height: $base-font-size * 1.5;
+
+$h1-default: 2.25em;   	// 36px
+$h2-default: 1.875em;  	// 30px
+$h3-default: 1.5em;    	// 24px
+$h4-default: 1.125em;  	// 18px
+$h5-default: 0.875em;  	// 14px
+$h6-default: 0.75em;	 	// 12px
+
+$primary-headline: $black;
+$secondary-headline-text: $slate-gray;
+$default-link-color: $blue;
+$default-link-hover: lighten($blue, 10%);
+$active-link-color: $lime-green;
+$visited-link-color: $red;
+
+// =============================================
+// Spacing Variables
+// =============================================
+$base-unit: 1em;
+$base-unit-half: 0.5em;
+$base-unit-quarter: 0.25em;
+
+// =============================================
+// Accordion Variables
+// =============================================
+$accordion-max-height: 40em;
+
+// =============================================
+// Button variables
+// =============================================
+$base-btn-padding: 0.5em 1.5em;
+$btn-default: $gray;
+$btn-default-text: $blue;
+$btn-primary: $blue;
+$btn-secondary: lighten($blue, 20%);
+$btn-success: $dark-green;
+$btn-warning: lighten($yellow, 5%);
+$btn-danger: $red;
+$btn-rounded: 3px;
+$btn-tiny: 75%;
+$btn-small: 85%;
+$btn-medium: 95%;
+$btn-large: 110%;
+$btn-x-large: 125%;
+
+// =============================================
+// Breakpoint variables
+// =============================================
+// the number 12 represents the number of columns.
+// this is required so the susy at-breakpoint
+// mixin doesn't choke up when you pass a
+// value greater than 60em's
+// https://github.com/ericam/susy/issues/157
+// =============================================
+$palm-small:  25em;			// 400px
+$palm-medium: 30em;  		// 480px
+$palm-large:  35em;  		// 560px
+
+$lap-small:  	40em;			// 640px
+$lap-medium: 	48em;			// 768px
+$lap-large:  	60em 12;	// 960px
+
+$desk-small: 	65em 12;	// 1040px
+$desk-medium: 80em 12;	// 1280px
+$desk-large: 	90em 12; 	// 1440px
+
+// =============================================
+// Susy Mobile First Grid Settings
+// =============================================
+// http://susy.oddbird.net/guides/reference/
+// Container: The root element of a Grid.
+// Layout: The total number of Columns in a grid.
+// Grid Padding: Padding on the sides of the Grid.
+// Context: The number of Columns spanned by the parent element.
+// Omega: Any Grid Element spanning the last Column in its Context.
+// =============================================
+$total-columns  : 12;              // a mobile first 12-column grid
+$column-width   : 4em;             // each column is 4em wide
+$gutter-width   : 1em;             // 1em gutters between columns
+$grid-padding   : $gutter-width;   // grid-padding equal to gutters
+$container-width: 65em;						 //	sets max-width on the container mixin
+
+// IE Support
+$legacy-support-for-ie  : true;
+$legacy-support-for-ie7 : $legacy-support-for-ie;

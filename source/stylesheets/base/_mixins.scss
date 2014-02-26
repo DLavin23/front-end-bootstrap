@@ -1,0 +1,143 @@
+@mixin btn-size($size, $padding) {
+	font-size: $size;
+	padding: $padding;
+}
+
+@mixin btn-color($background, $color) {
+	background: $background;
+	color: $color;
+	&:hover {
+		background: lighten($background, 10%);
+	}
+}
+
+@mixin transition($name, $duration, $type) {
+  -webkit-transition: $name $duration $type;
+     -moz-transition: $name $duration $type;
+      -ms-transition: $name $duration $type;
+       -o-transition: $name $duration $type;
+          transition: $name $duration $type;
+}
+
+@mixin is-hidden($breakpoint) {
+  @include at-breakpoint($breakpoint) {
+    display: none;
+  }
+}
+
+@mixin is-visible($breakpoint) {
+  @include at-breakpoint($breakpoint) {
+    display: block;
+  }
+}
+
+// =======================================
+// Make line-height equal to an element's height
+// =======================================
+@mixin line-and-height($height) {
+  height: $height;
+  line-height: $height - 2;
+}
+
+// =======================================
+// Responsive Mixins
+// https://github.com/GumbyFramework/Gumby/blob/master/sass/functions/_responsivity.scss
+// =======================================
+@mixin respond($media) {
+  @if $media == portrait-phones {
+    @media only screen and (max-width: $min-device-width) {
+      @content;
+    }
+  }
+  @else if $media == landscape-phones {
+    @media only screen and (min-width: breakpoint($min-device-width)) and (max-width: breakpoint($tablet-device-width)) {
+      @content;
+    }
+  }
+  @else if $media == all-phones {
+    @media only screen and (max-width: breakpoint($tablet-device-width)) {
+      @content;
+    }
+  }
+  @else if $media == portrait-tablets {
+    @media only screen and (max-width: $tablet-device-width) {
+      @content;
+    }
+  }
+  @else if $media == tablets {
+    @media only screen and (min-width: $tablet-device-width) and (max-width: $document-width - 1) {
+      @content;
+    }
+  }
+  @else if $media == desktop {
+    @media only screen and (min-width: $tablet-device-width) {
+      @content;
+    }
+  }
+  @else if $media == document-width {
+    @media only screen and (max-width: $document-width + 20) {
+      @content;
+    }
+  }
+  @else if $media == large-screens {
+    @media only screen and (min-width: $max-device-width) {
+      @content;
+    }
+  }
+  @else if $media == print {
+    @media print {
+      @content;
+    }
+  }
+  @else {
+    @media only screen and ('#{$media}') {
+      @content;
+    }
+  }
+}
+
+@mixin triangle ($size, $color, $direction) {
+  height: 0;
+  width: 0;
+
+  @if ($direction == up) or ($direction == down) or ($direction == right) or ($direction == left) {
+    border-color: transparent;
+    border-style: solid;
+    border-width: $size / 2;
+
+    @if $direction == up {
+      border-bottom-color: $color;
+
+    } @else if $direction == right {
+      border-left-color:   $color;
+
+    } @else if $direction == down {
+      border-top-color:    $color;
+
+    } @else if $direction == left {
+      border-right-color:  $color;
+    }
+  }
+
+  @else if ($direction == up-right) or ($direction == up-left) {
+    border-top: $size solid $color;
+
+    @if $direction == up-right {
+      border-left:  $size solid transparent;
+
+    } @else if $direction == up-left {
+      border-right: $size solid transparent;
+    }
+  }
+
+  @else if ($direction == down-right) or ($direction == down-left) {
+    border-bottom: $size solid $color;
+
+    @if $direction == down-right {
+      border-left:  $size solid transparent;
+
+    } @else if $direction == down-left {
+      border-right: $size solid transparent;
+    }
+  }
+}

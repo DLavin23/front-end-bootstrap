@@ -1,0 +1,65 @@
+// =======================================
+// Navigation
+// =======================================
+
+// Standard Toggle
+a.menu-link {
+  float: right;
+  display: block;
+  padding: 1em;
+  @include at-breakpoint($lap-large) {
+  	display: none;
+  }
+}
+
+nav[role=navigation] {
+	clear: both;
+	-webkit-transition: all 0.3s ease-out;  
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.js nav[role=navigation] {
+	overflow: hidden;
+	max-height: 0;
+	@include at-breakpoint($lap-large) {
+		max-height: none;
+	}
+}
+
+nav[role=navigation].active {
+	max-height: 45em;
+}
+
+nav[role=navigation] ul {
+	margin: 0;
+	padding: 0;
+	border-top: 1px solid #808080;
+	@include at-breakpoint($lap-large) {
+		position: absolute;
+		top: 25px;
+		right: 1em;
+		margin: 0 0 0 -0.25em;
+		border: 0;		
+	}
+}
+
+nav[role=navigation] li {
+	@include at-breakpoint($lap-large) {
+		display: inline-block;
+		margin: 0 0.25em;		
+	}
+}
+
+nav[role=navigation] li a {
+	display: block;
+	padding: 0.8em;
+	border-bottom: 1px solid #808080;
+	@include at-breakpoint($lap-large) {
+		border: 0;
+		padding: 0 10px;
+	}
+}
+
